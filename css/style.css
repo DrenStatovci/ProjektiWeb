@@ -3,14 +3,16 @@
 }
 
 body {
+    width: 100%;
     margin: 0;
     background-color: rgb(242, 242, 242);
 }
 
 /* ------------ FILLIMI I KRIJMIT TE HEADER ----------------*/
 .header {
-    width: auto;
+    width: 100%;
     position: sticky;
+    z-index: 1;
     top: 0;
     background-color: white;
 }
@@ -38,6 +40,7 @@ nav {
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -119,4 +122,156 @@ nav {
     cursor: pointer;
 }
 
-/* -------- MBARIMI I KRIJIMIT TE HEADER -------------*/
+
+
+
+/* ---------------------*/
+
+
+/* -------- CATEGORIES PAGE STYLE ---------- */
+
+.categoriesBody {
+    width: 100%;
+}
+
+.categoriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.category {
+    margin-top: 20px;
+    width: 45%;
+}
+
+@media screen and (max-width:1280px) {
+    .categoriesContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .category {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .categoriesContainer {
+        justify-content: stretch;
+    }
+}
+
+.categoryTitle {
+    font-size: 29px;
+    font-weight: normal;
+    display: inline;
+}
+
+.titleHolder a {
+    float: right;
+    margin-top: 13px;
+    color: black;
+}
+
+.titleHolder a:hover {
+    color: rgb(215, 8, 8);
+    transition: .3s;
+}
+
+.categories_card_holder {
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.categories_card_holder .slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2) - 9px);
+    gap: 15px;
+    overflow: hidden;
+    padding-left: 0px;
+    scroll-behavior: smooth;
+
+    /* transition: transform 0.5s ease; */
+}
+
+.categories_card_holder i {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+}
+
+.categories_card_holder i:hover {
+    background-color: rgb(215, 8, 8);
+    color: white;
+    transition: .5s;
+}
+
+.categories_card_holder i:first-child {
+    left: -25px;
+    top: 45%;
+}
+
+.categories_card_holder i:last-child {
+    right: -25px;
+    top: 45%;
+
+}
+
+@media screen and (max-width:600px) {
+    .categories_card_holder .slider {
+        grid-auto-columns: 100%;
+    }
+}
+
+.card {
+    background-color: white;
+    list-style: none;
+    height: 100%;
+    padding-bottom: 20px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+.cardContent {
+    margin: 15px;
+}
+
+.categoryLink {
+    color: rgb(215, 8, 8);
+
+}
+
+.categoryLink:hover {
+    text-decoration: underline;
+}
+
+.cardTitle {
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 7px;
+}
+
+.cardTitle a {
+    color: black;
+}
+
+.cardText {
+    color: rgb(89, 87, 87);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
