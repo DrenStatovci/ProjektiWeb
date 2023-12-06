@@ -275,3 +275,74 @@ nav {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
+
+
+/*  SIGNUP STYLE   */
+
+.registerContainer {
+    width: 100%;
+}
+
+.registerBox {
+    margin: 150px auto 0px auto;
+    width: 550px;
+    height: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+    text-align: center;
+}
+
+.registerBox>h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.registerBox form {
+    margin-top: 60px;
+}
+
+.registerBox input[type=text],
+input[type=email],
+input[type=password] {
+    width: 60%;
+    height: 20px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+.registerBox input[type=submit] {
+    width: 64%;
+    height: 40px;
+    background: rgb(215, 8, 8);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.registerBox a {
+    color: rgb(215, 8, 8);
+}
+
+.registerBox a:hover {
+    text-decoration: underline;
+}
+
+.titleHolder a {
+    float: right;
+    margin-top: 13px;
+    color: black;
+}
+
+.titleHolder a:hover {
+    color: rgb(215, 8, 8);
+    transition: .3s;
+}
