@@ -10,12 +10,19 @@ body {
 
 /* ------------ FILLIMI I KRIJMIT TE HEADER ----------------*/
 .header {
-    width: 100%;
+    width: 100vw;
     position: sticky;
     z-index: 1;
     top: 0;
     background-color: white;
 }
+
+@media screen and (max-width:1280px) {
+    .searchBar {
+        display: none;
+    }
+}
+
 
 a {
     text-decoration: none;
@@ -124,15 +131,16 @@ nav {
 
 
 
+.container {
+    width: 100%;
+}
 
 /* ---------------------*/
 
 
 /* -------- CATEGORIES PAGE STYLE ---------- */
 
-.categoriesBody {
-    width: 100%;
-}
+
 
 .categoriesContainer {
     display: flex;
@@ -258,8 +266,11 @@ nav {
     text-decoration: underline;
 }
 
+
+
 .cardTitle {
     font-size: 25px;
+    color: black;
     font-weight: normal;
     margin-top: 7px;
 }
@@ -278,10 +289,6 @@ nav {
 
 
 /*  SIGNUP STYLE   */
-
-.registerContainer {
-    width: 100%;
-}
 
 .registerBox {
     margin: 150px auto 0px auto;
@@ -303,8 +310,8 @@ nav {
 }
 
 .registerBox input[type=text],
-input[type=email],
-input[type=password] {
+.registerBox input[type=email],
+.registerBox input[type=password] {
     width: 60%;
     height: 20px;
     margin: 30px auto;
@@ -345,4 +352,78 @@ input[type=password] {
 .titleHolder a:hover {
     color: rgb(215, 8, 8);
     transition: .3s;
+}
+
+
+
+/*   SINGLE PAGE STYLE   */
+
+.single-container {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15%;
+}
+
+.post-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.post-img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.post-body {
+    width: 70%;
+    line-height: 1.6;
+}
+
+.sidebar {
+    width: 400px;
+    margin-left: -20%;
+    padding-right: 15%;
+    margin-top: 60px;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.sidebar h2 {
+    padding: 10px;
+    background-color: white;
+}
+
+.section-post {
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+
+}
+
+.section-post img {
+    width: 40%;
+}
+
+.section-post a {
+    margin: 10px 15px;
+    color: black;
+    font-size: 17px;
+}
+
+
+@media screen and (max-width:1240px) {
+    .single-container {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .sidebar {
+        width: 70%;
+        margin: 0px;
+    }
+
 }
