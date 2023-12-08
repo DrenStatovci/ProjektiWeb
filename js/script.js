@@ -8,3 +8,5 @@ function scrollSlider(sliderId, direction) {
         slider.scrollLeft += cardWidth;
     }
 }
+
+document.getElementById('year').innerHTML = new Date().getFullYear();
