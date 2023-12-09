@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c9fcbbfbdb.js" crossorigin="anonymous"></script>
-    <script src="js/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -22,11 +22,11 @@
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="register active">
                     <a>Register</a>
                     <div class="drop_link">
-                        <a href="#">Log In</a>
+                        <a href="login.html">Log In</a>
                         <a href="signup.html">Sign Up</a>
                     </div>
                 </li>
@@ -44,29 +44,31 @@
             <h1>Sign up</h1>
             <form action="">
                 <!-- <label for="name">Name</label> -->
-                <input type="text" name="name" id="name" placeholder="Name">
-                <div id="errorName"></div>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <div id="errorName" style="color: red;"></div>
 
                 <!-- <label for="email">Email</label> -->
-                <input type="email" name="email" id="email" placeholder="Email">
-                <div id="errorEmail"></div>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <div id="errorEmail" style="color: red;"></div>
 
 
                 <!-- <label for="password">Password</label> -->
-                <input type="password" name="password" id="password" placeholder="Password">
-                <div id="errorPassword"></div>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <div id="errorPassword" style="color: red;"></div>
 
 
                 <!-- <label for="confirmPassword">Confirm Password</label> -->
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
-                <div id="errorConfirmPassword"></div>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required >
+                <div id="errorConfirmPassword" style="color: red;"></div>
 
 
-                <input type="submit" name="submit">
+                <input type="submit" name="submit" class="btn" onclick="validation()">
             </form>
-            <p>Already have an account? Log in <a href="#">here</a></p>
+            <p>Already have an account? Log in <a href="login.html">here</a></p>
         </div>
     </div>
+
+
 
     <footer class="footer">
         <div class="footerLinks">
