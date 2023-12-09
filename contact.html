@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c9fcbbfbdb.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -45,11 +46,13 @@
             <form action="">
 
                 <!-- <label for="email">Email</label> -->
-                <input type="email" name="email" id="email" placeholder="Email">
-                <div id="errorEmail"></div>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <div id="errorEmail" class="error"></div>
                 <!-- <label for="password">Password</label> -->
-                <input type="text" name="contact us" id="text" placeholder="Contact Us!">
-                <input type="submit" name="submit">
+                <input type="text" name="description" id="description" placeholder="Contact Us!" required>
+                <div id="errorDescription" class="error"></div>
+
+                <input type="submit" name="submit" onclick="contactValidation()">
             </form>
         </div>
     </div>
