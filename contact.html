@@ -7,26 +7,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c9fcbbfbdb.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <div class="header">
         <nav>
+
             <a href="index.html">
                 <h2 class="navText"><span>News</span>Web</h2>
             </a>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="register active">
+                <li class="active"><a href="#">Contact</a></li>
+                <li class="register">
                     <a>Register</a>
                     <div class="drop_link">
-                        <a href="#">Log In</a>
+                        <a href="login.html">Log In</a>
                         <a href="signup.html">Sign Up</a>
                     </div>
                 </li>
@@ -39,23 +38,19 @@
         </nav>
     </div>
 
+    
     <div class="container">
-        <div class="loginBox">
-            <h1>Log In</h1>
+        <div class="contactBox">
+            <h1>Contact Us</h1>
             <form action="">
 
                 <!-- <label for="email">Email</label> -->
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <div id="errorEmail" style="color: red;"></div>
-
-
+                <input type="email" name="email" id="email" placeholder="Email">
+                <div id="errorEmail"></div>
                 <!-- <label for="password">Password</label> -->
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <div id="errorPassword" style="color: red;"></div>
-
+                <input type="text" name="contact us" id="text" placeholder="Contact Us!">
                 <input type="submit" name="submit">
             </form>
-            <p>Don't have an account? <a href="signup.html">Sign Up.</a></p>
         </div>
     </div>
 

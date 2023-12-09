@@ -556,6 +556,12 @@ nav {
     height: 550px;
 }
 
+.sport4-img:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
 .sport4-text{
     position: absolute;
     bottom: 40px;
@@ -565,6 +571,11 @@ nav {
     text-shadow: 1px 1px black;
     font-weight: 800;
     background-color: rgba(0,0,0, 0.2);
+
+}
+
+.sport4-link{
+    color: white;
 }
 
 .home-categories-big{
@@ -579,9 +590,10 @@ nav {
 .home-categories-big-template{
     width: 250px;
     height:210px;
-    border-bottom-color: lightgray;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
+}
+
+.home-categories-big-template:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .categories-big-img{
@@ -612,12 +624,20 @@ nav {
     margin-top: 10px;
 }
 
+.home-categories-template:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .home-categories-template-sport{
     height: 100px;
     width:300px;
     margin-left: 10px;
     padding-bottom: 10px;
     margin-top: 10px;
+}
+
+.home-categories-template-sport:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .categories-img{
@@ -680,4 +700,200 @@ nav {
 
 .sport-text{
     font-size: small;
+}
+
+
+
+/* login body */
+
+
+.loginBox {
+    margin: 75px auto 0px auto;
+    width: 550px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+    text-align: center;
+}
+
+.loginBox>h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.loginBox form {
+    margin-top: 60px;
+}
+
+.loginBox input[type=email],
+.loginBox input[type=password] {
+    width: 60%;
+    height: 20px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+.loginBox input[type=submit] {
+    width: 64%;
+    height: 40px;
+    background: rgb(215, 8, 8);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.loginBox a {
+    color: rgb(215, 8, 8);
+}
+
+.loginBox a:hover {
+    text-decoration: underline;
+}
+
+
+/* Contact Us body */
+
+
+.contactBox {
+    margin: 75px auto 0px auto;
+    width: 550px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+    text-align:center;
+}
+
+.contactBox>h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.contactBox form {
+    margin-top: 60px;
+}
+
+.contactBox input[type=email]{
+    width: 60%;
+    height: 20px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+.contactBox input[type=submit] {
+    width: 64%;
+    height: 40px;
+    background: rgb(215, 8, 8);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.contactBox a {
+    color: rgb(215, 8, 8);
+}
+
+.contactBox a:hover {
+    text-decoration: underline;
+}
+
+.contactBox input[type=text]{
+    width: 60%;
+    height: px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    padding-bottom: 100px;   
+}
+
+
+
+
+
+
+
+.registerBox form {
+
+    margin-top: 60px;
+
+}
+
+
+
+
+.registerBox input[type=text],
+
+.registerBox input[type=email],
+
+.registerBox input[type=password] {
+
+    width: 60%;
+
+    height: 20px;
+
+    margin: 30px auto;
+
+    padding: 10px;
+
+    border: 1px solid black;
+
+    border-radius: 5px;
+
+    display: block;
+
+}
+
+
+
+
+.error {
+
+    color: red;
+
+}
+
+
+.registerBox input[type=submit] {
+
+    width: 64%;
+
+    height: 40px;
+
+    background: rgb(215, 8, 8);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    display: block;
+
 }
