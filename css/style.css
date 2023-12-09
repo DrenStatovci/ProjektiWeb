@@ -306,7 +306,9 @@ nav {
 }
 
 .registerBox form {
+
     margin-top: 60px;
+
 }
 
 .registerBox input[type=text],
@@ -321,6 +323,14 @@ nav {
     display: block;
 }
 
+
+
+
+.error {
+    color: red;
+}
+
+
 .registerBox input[type=submit] {
     width: 64%;
     height: 40px;
@@ -333,6 +343,7 @@ nav {
     border: none;
     border-radius: 5px;
     display: block;
+
 }
 
 .registerBox a {
@@ -823,77 +834,4 @@ nav {
     border-radius: 5px;
     display: block;
     padding-bottom: 100px;   
-}
-
-
-
-
-
-
-
-.registerBox form {
-
-    margin-top: 60px;
-
-}
-
-
-
-
-.registerBox input[type=text],
-
-.registerBox input[type=email],
-
-.registerBox input[type=password] {
-
-    width: 60%;
-
-    height: 20px;
-
-    margin: 30px auto;
-
-    padding: 10px;
-
-    border: 1px solid black;
-
-    border-radius: 5px;
-
-    display: block;
-
-}
-
-
-
-
-.error {
-
-    color: red;
-
-}
-
-
-.registerBox input[type=submit] {
-
-    width: 64%;
-
-    height: 40px;
-
-    background: rgb(215, 8, 8);
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 14px;
-
-    margin: 20px auto;
-
-    padding: 10px;
-
-    border: none;
-
-    border-radius: 5px;
-
-    display: block;
-
 }
