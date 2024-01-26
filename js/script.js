@@ -63,7 +63,7 @@ function signupValidation() {
     errorConfirmPassword.innerText = "";
 
 
-    alert("Jeni regjistruar me sukses");
+    // alert("Jeni regjistruar me sukses");
 }
 
 function loginValidation() {
@@ -88,7 +88,7 @@ function loginValidation() {
         return false;
     }
     errorPassword.innerText = "";
-    alert("Jeni kyqur me sukses");
+    // alert("Jeni kyqur me sukses");
 }
 
 
