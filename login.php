@@ -1,6 +1,10 @@
 <?php include_once 'inc/header.php';
 include_once 'admin/lib/User.php';
 
+if (isset($_SESSION['id'])) {
+    header('Location:index.php');
+}
+
 
 if (isset($_POST['login'])) {
 
@@ -17,7 +21,7 @@ if (isset($_POST['login'])) {
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['role'] = $user->getRole();
 
-        if ($_SESSION['role'] == 'admin') {
+        if ($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'journalist') {
             header('Location:admin/index.php');
         } else if ($_SESSION['role'] == 'user') {
             header('Location:index.php');
