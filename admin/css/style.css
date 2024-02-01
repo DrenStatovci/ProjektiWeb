@@ -1,0 +1,272 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(242, 242, 242);
+}
+
+/* ------------ FILLIMI I KRIJMIT TE HEADER ----------------*/
+.header {
+    width: 100vw;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(40, 40, 40);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navText {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    /* display: inline-block; */
+    list-style-type: none;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.navbar li a {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.navbar li:hover {
+    background-color: rgb(215, 8, 8);
+    transition: .4s;
+}
+
+.navbar li:hover a {
+    color: white;
+    transition: .4s;
+}
+
+.settings {
+    display: inline-block;
+}
+
+.drop_link {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    margin-left: -20px;
+    z-index: 1;
+}
+
+.drop_link a {
+    color: black !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.drop_link a:hover {
+    background-color: #f9f9f9;
+}
+
+.settings:hover .drop_link {
+    display: block;
+}
+
+/*  SIDEBAR   */
+
+.sidebar {
+    height: 92vh;
+    width: 13vw;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideNav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+
+}
+
+.sideNav a {
+    color: white;
+    align-self: flex-start;
+    /* padding: 5%; */
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.sideNav a i {
+    padding: 0 10px;
+}
+
+.sideNavFooter {
+    width: 100%;
+    height: 10%;
+    align-self: flex-start;
+    background-color: rgb(40, 40, 40);
+}
+
+.sideNavFooter p {
+    color: rgb(173, 173, 173);
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+/*    DASHBOARD CONTAINER   */
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.dashboardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.dashboardContainer h1 {
+    padding: 100px;
+}
+
+.tableContainer table {
+    border: solid 1px rgb(40, 40, 40);
+    border-collapse: collapse;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.tableContainer td,
+.tableContainer th {
+    border: solid 1px rgb(40, 40, 40);
+}
+
+.tableContainer {
+    height: 100%;
+}
+
+.dashboardContainer td {
+    padding: 15px;
+}
+
+.createUser {
+    color: white;
+    letter-spacing: 1px;
+    background-color: rgb(215, 8, 8);
+    padding: 15px 5px;
+    border-radius: 10px;
+}
+
+
+
+.registerBox {
+    margin: 150px auto 0px auto;
+    width: 550px;
+    height: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+    text-align: center;
+}
+
+.registerBox>h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.registerBox form {
+    margin-top: 60px;
+}
+
+.registerBox input[type=text],
+.registerBox input[type=email],
+.registerBox input[type=password] {
+    width: 60%;
+    height: 20px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+.registerBox select {
+    width: 64%;
+    height: 40px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+.error {
+    color: red;
+}
+
+.registerBox input[type=submit] {
+    width: 64%;
+    height: 40px;
+    background: rgb(215, 8, 8);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+
+}
+
+.registerBox a {
+    color: rgb(215, 8, 8);
+}
+
+.registerBox a:hover {
+    text-decoration: underline;
+}
+
+.titleHolder a {
+    float: right;
+    margin-top: 13px;
+    color: black;
+}
+
+.titleHolder a:hover {
+    color: rgb(215, 8, 8);
+    transition: .3s;
+}

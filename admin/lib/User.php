@@ -50,22 +50,69 @@ class User extends Database
         $this->role = $r;
     }
 
-
-    public function createUser($user)
+    public function getAllUsers()
     {
-        $name = $user->getName();
-        $email = $user->getEmail();
-        $password = $user->getPassword();
-        $sql = "INSERT INTO user (name,email,password) VALUES (?,?,?)";
+        $sql = "SELECT * FROM user";
         $stmt = $this->prepare($sql);
-        $stmt->execute([$name, $email, $password]);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, __NAMESPACE__ . "\\User");
+        return $stmt->fetchAll();
+    }
+
+    public function getUserId($id)
+    {
+        $sql = "SELECT * FROM user";
+        $sql .= " where id=?";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$id]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, __NAMESPACE__ . "\\User");
+        return $stmt->fetch();
+    }
+
+    public function createUser()
+    {
+        $name = $this->getName();
+        $email = $this->getEmail();
+        $password = $this->getPassword();
+        $role = $this->getRole();
+        if ($role) {
+            $sql = "INSERT INTO user (name,email,password,role) VALUES (?,?,?,?)";
+            $stmt = $this->prepare($sql);
+            $stmt->execute([$name, $email, $password, $role]);
+        } else {
+            $sql = "INSERT INTO user (name,email,password) VALUES (?,?,?)";
+            $stmt = $this->prepare($sql);
+            $stmt->execute([$name, $email, $password]);
+        }
         return true;
     }
 
+
+
     public function updateUser()
     {
-
+        $id = $this->getId();
+        $name = $this->getName();
+        $email = $this->getEmail();
+        $password = $this->getPassword();
+        $role = $this->getRole();
+        $sql = "UPDATE user SET name='$name',email='$email',password='$password',role='$role' where id=?";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$id]);
+        return true;
     }
+
+
+    public function deleteUser()
+    {
+        $id = $this->getId();
+        $sql = "DELETE FROM user where id = ?";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$id]);
+        return true;
+    }
+
+
 
 
     public function verifyUser($email, $password)
