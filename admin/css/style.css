@@ -100,7 +100,7 @@ nav {
 
 .sidebar {
     height: 92vh;
-    width: 13vw;
+    width: 15vw;
     background-color: rgb(20, 20, 20);
     display: flex;
     flex-direction: column;

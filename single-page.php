@@ -1,20 +1,22 @@
-<?php include_once 'inc/header.php'; ?>
+<?php include_once 'inc/header.php'; 
+      include 'admin/lib/News.php';
+
+      $news = new Admin\Lib\News();
+
+      if(isset($_GET['nid'])){
+        $news=  $news->getNewsId($_GET['nid']);
+      }
+
+
+?>
 
 <div class="single-container">
     <div class="post-container">
-        <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-        <img src="images/tech1.jpg" alt="Post Image" class="post-img">
+        <h1 class="post-title"><?php echo $news->getTitle(); ?></h1>
+        <img src="images/<?php echo $news->getImage(); ?>" alt="Post Image" class="post-img">
         <div class="post-body">
-            <p><a href="#" class="categoryLink">Technology</a> / March 12, 2022</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel velit at urna dignissim gravida ac
-                ut libero. Nullam tincidunt, elit ac euismod malesuada, arcu elit malesuada lectus, nec varius nisl
-                felis in justo.</p>
-            <p>Curabitur hendrerit quam eu neque auctor, id congue libero tempus. Sed auctor eros vel velit feugiat,
-                ac consectetur libero interdum. Integer scelerisque nisl ac nisl cursus, non efficitur nisi
-                ullamcorper.</p>
-            <p>Phasellus vel ante sit amet arcu eleifend vestibulum. Praesent quis erat vel justo malesuada
-                aliquam. In ac arcu nec justo malesuada euismod. Etiam cursus libero eget elit feugiat, a
-                consectetur orci varius.</p>
+            <p><a href="#" class="categoryLink"><?php echo $news->getCategory(); ?></a> / March 12, 2022</p>
+            <p><?php echo $news->getDescription(); ?></p>
         </div>
     </div>
 

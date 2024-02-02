@@ -3,7 +3,7 @@
         <div class="sideNav">
             <a href="index.php"><i class="fa-regular fa-user"></i> Dashboard</a>
             <a href="user.php"><i class="fa-solid fa-newspaper"></i>User</a>
-            <a href="#"><i class="fa-regular fa-address-book"></i> Contact</a>
+            <a href="contact.php"><i class="fa-regular fa-address-book"></i> Contact</a>
         </div>
 
         <div class="sideNavFooter">
