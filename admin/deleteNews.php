@@ -13,17 +13,17 @@ if (isset($_GET['nid'])) {
 
 if (isset($_POST['delete'])) {
     if ($news->deleteNews()) {
-        echo "<script>alert('Succesfully created account!')</script>";
+        echo "<script>alert('Succesfully created news!')</script>";
         header('Location:index.php');
     } else {
-        echo "<script>alert('Creation failed!')</script>";
+        echo "<script>alert('Deleting failed!')</script>";
     }
 }
 
 ?>
 <div class="container">
     <div class="registerBox">
-        <h1>Edit News</h1>
+        <h1>Delete News</h1>
         <form method="post" id="signupForm" enctype="multipart/form-data">
             <!-- <label for="title">Title</label> -->
             <input type="text" title="title" id="title" name="title" placeholder="Title" disabled  value="<?php if (!empty($news->getTitle())) {

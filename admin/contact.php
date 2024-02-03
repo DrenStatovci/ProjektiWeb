@@ -26,7 +26,7 @@ include 'lib/Contact.php';
                         <td>" . $contacts->getId() . "</td>
                         <td>" . $contacts->getEmail() . "</td>
                         <td>" . $contacts->getMessage() . "</td>
-                        <td><a href='deleteContact.php?nid=" . $contacts->getId() . "'>Delete</a></td>      
+                        <td><a href='deleteContact.php?cid=" . $contacts->getId() . "'>Delete</a></td>      
                     </tr>
                     ";
             }

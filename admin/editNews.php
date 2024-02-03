@@ -17,10 +17,10 @@ if (isset($_POST['edit']) && $_FILES['image']) {
     $news->setImage($_FILES['image']['name']);
     $news->setAuthor($_SESSION['name']);
     if ($news->updateNews()) {
-        echo "<script>alert('Succesfully created account!')</script>";
+        echo "<script>alert('Succesfully edited post!')</script>";
         header('Location:index.php');
     } else {
-        echo "<script>alert('Creation failed!')</script>";
+        echo "<script>alert('Editing failed!')</script>";
     }
 }
 
