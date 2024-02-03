@@ -1,4 +1,3 @@
-
 <?php
 use Admin\Lib\News;
 
@@ -10,7 +9,6 @@ if ($_SESSION['role'] == 'user') {
     header("Location:../index.php");
 }
 ?>
-
 
 <div class="dashboardContainer">
     <h1>News</h1>
@@ -26,6 +24,7 @@ if ($_SESSION['role'] == 'user') {
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
+
             <?php
             $allNews = new News();
             $allNews = $allNews->getAllNews();
@@ -34,8 +33,8 @@ if ($_SESSION['role'] == 'user') {
                     <tr>
                         <td>" . $news->getId() . "</td>
                         <td>" . $news->getTitle() . "</td>
-                        <td>" . $news->getDescription() . "</td>
-                        <td><img src='../images/".$news->getImage()."' width='150px'></td>
+                        <td class='cardText' >" . $news->getDescription() . "</td>
+                        <td><img src='../images/" . $news->getImage() . "' width='150px'></td>
                         <td>" . $news->getCategory() . "</td>
                         <td>" . $news->getAuthor() . "</td>
                         <td><a href='editNews.php?nid=" . $news->getId() . "'>Edit</a></td>

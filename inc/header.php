@@ -20,7 +20,7 @@ session_start();
     <div class="header">
         <nav>
 
-            <a href="index.html">
+            <a href="index.php">
                 <h2 class="navText"><span>News</span>Web</h2>
             </a>
             <ul class="navbar">
