@@ -2,7 +2,7 @@
 session_start();
 
 
-if (!(isset($_SESSION)) ||$_SESSION['role'] == 'user') {
+if (!(isset($_SESSION['id'])) || $_SESSION['role'] == 'user') {
     header("Location:../index.php");
 }
 
