@@ -373,19 +373,19 @@ nav {
 }
 
 .post-img {
-    width: 70%;
+    width: 60%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 .post-body {
-    width: 70%;
+    width: 60%;
     line-height: 1.6;
 }
 
 .sidebar {
-    width: 400px;
+    width: 700px;
     margin-left: -20%;
     padding-right: 15%;
     margin-top: 60px;
@@ -412,7 +412,7 @@ nav {
 }
 
 .section-post a {
-    margin: 10px 15px;
+    margin: 5px 15px;
     color: black;
     font-size: 17px;
 }
