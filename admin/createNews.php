@@ -12,7 +12,7 @@ if (isset($_POST['create']) && $_FILES['image']) {
     $news->setCategory($_POST['category']);
     $news->setAuthor($_SESSION['name']);
     if ($news->createNews()) {
-        echo "<script>alert('Succesfully created account!')</script>";
+        echo "<script>alert('Succesfully created post!')</script>";
         header('Location:index.php');
     } else {
         echo "<script>alert('Creation failed!')</script>";

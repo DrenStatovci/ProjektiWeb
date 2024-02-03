@@ -6,6 +6,8 @@ use PDO;
 
 class User extends Database
 {
+
+    
     private $id;
     private $name;
     private $email;

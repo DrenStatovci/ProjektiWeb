@@ -16,10 +16,10 @@ if (isset($_GET['uid'])) {
 
 if (isset($_POST['delete'])) {
     if ($user->deleteUser()) {
-        echo "<script>alert('Succesfully created account!')</script>";
+        echo "<script>alert('Succesfully deleted account!')</script>";
         header('Location:user.php');
     } else {
-        echo "<script>alert('Creation failed!')</script>";
+        echo "<script>alert('Deleting user failed!')</script>";
     }
 }
 

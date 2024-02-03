@@ -19,10 +19,10 @@ if (isset($_POST['edit'])) {
     $user->setPassword($_POST['password']);
     $user->setRole($_POST['role']);
     if ($user->updateUser()) {
-        echo "<script>alert('Succesfully created account!')</script>";
+        echo "<script>alert('Succesfully edited account!')</script>";
         header('Location:user.php');
     } else {
-        echo "<script>alert('Creation failed!')</script>";
+        echo "<script>alert('Edting user failed!')</script>";
     }
 }
 

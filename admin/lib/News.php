@@ -86,9 +86,9 @@ class News extends Database
         $image = $this->getImage();
         $category = $this->getCategory();
         $author = $this->getAuthor();
-            $sql = "INSERT INTO news (title,description,image,category,author) VALUES (?,?,?,?,?)";
-            $stmt = $this->prepare($sql);
-            $stmt->execute([$title, $description, $image, $category,$author]);
+        $sql = "INSERT INTO news (title,description,image,category,author) VALUES (?,?,?,?,?)";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$title, $description, $image, $category, $author]);
         return true;
     }
 
@@ -116,6 +116,33 @@ class News extends Database
         $stmt = $this->prepare($sql);
         $stmt->execute([$id]);
         return true;
+    }
+
+    public function getLatestNews()
+    {
+        $sql = "SELECT * FROM news order by id desc limit 1";
+        $stmt = $this->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, __NAMESPACE__ . "\\News");
+        return $stmt->fetch();
+    }
+
+    public function getRandomNews($lim)
+    {
+        $sql = "SELECT * FROM news order by rand() limit $lim";
+        $stmt = $this->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, __NAMESPACE__ . "\\News");
+        return $stmt->fetchAll();
+    }
+
+    public function getLastByCategory($category)
+    {
+        $sql = "SELECT * FROM news where category = '$category' order by id desc limit 1 ";
+        $stmt = $this->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, __NAMESPACE__ . "\\News");
+        return $stmt->fetch();
     }
 
 }
