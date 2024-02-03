@@ -1,50 +1,37 @@
 <?php
-use Admin\Lib\News;
+use Admin\Lib\Contact;
 
 include 'inc/header.php';
 include 'inc/sidebar.php';
-include 'lib/News.php';
+include 'lib/Contact.php';
 
-if ($_SESSION['role'] == 'user') {
-    header("Location:../index.php");
-}
 ?>
 
 
 <div class="dashboardContainer">
-    <h1>News</h1>
+    <h1>Contacts</h1>
     <div class="tableContainer">
         <table>
             <tr>
                 <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Category</th>
-                <th>Author</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Email</th>
+                <th>Message</th>
             </tr>
             <?php
-            $allNews = new News();
-            $allNews = $allNews->getAllNews();
-            foreach ($allNews as $news) {
+            $allContacts = new Contact();
+            $allContacts = $allContacts->getAllContacts();
+            foreach ($allContacts as $contacts) {
                 echo "  
                     <tr>
-                        <td>" . $news->getId() . "</td>
-                        <td>" . $news->getTitle() . "</td>
-                        <td>" . $news->getDescription() . "</td>
-                        <td><img src='../images/".$news->getImage()."' width='150px'></td>
-                        <td>" . $news->getCategory() . "</td>
-                        <td>" . $news->getAuthor() . "</td>
-                        <td><a href='editNews.php?nid=" . $news->getId() . "'>Edit</a></td>
-                        <td><a href='deleteNews.php?nid=" . $news->getId() . "'>Delete</a></td>      
+                        <td>" . $contacts->getId() . "</td>
+                        <td>" . $contacts->getEmail() . "</td>
+                        <td>" . $contacts->getMessage() . "</td>
+                        <td><a href='deleteContact.php?nid=" . $contacts->getId() . "'>Delete</a></td>      
                     </tr>
                     ";
             }
             ?>
         </table>
-        <a href="createNews.php" class="createUser">Create News</a>
     </div>
 </div>
 </div>
