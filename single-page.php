@@ -1,22 +1,37 @@
-<?php include_once 'inc/header.php'; 
-      include 'admin/lib/News.php';
+<?php include_once 'inc/header.php';
+include 'admin/lib/News.php';
 
-      $news = new Admin\Lib\News();
+$news = new Admin\Lib\News();
 
-      if(isset($_GET['nid'])){
-        $news=  $news->getNewsId($_GET['nid']);
-      }
+if (isset($_GET['nid'])) {
+    $news = $news->getNewsId($_GET['nid']);
+}
 
 
 ?>
 
 <div class="single-container">
     <div class="post-container">
-        <h1 class="post-title"><?php echo $news->getTitle(); ?></h1>
+        <h1 class="post-title">
+            <?php echo $news->getTitle(); ?>
+        </h1>
         <img src="images/<?php echo $news->getImage(); ?>" alt="Post Image" class="post-img">
         <div class="post-body">
-            <p><a href="#" class="categoryLink"><?php echo $news->getCategory(); ?></a> / March 12, 2022</p>
-            <p><?php echo $news->getDescription(); ?></p>
+            <p><a href="#" class="categoryLink">
+                    <?php echo $news->getCategory(); ?>
+                </a> / March 12, 2022</p>
+            <p>
+                <?php
+                if (isset($_SESSION['role'])) {
+                    if ($_SESSION['role'] == 'admin') {
+                        echo "Author: " . $news->getAuthor();
+                    }
+                }
+                ?>
+            </p>
+            <p>
+                <?php echo $news->getDescription(); ?>
+            </p>
         </div>
     </div>
 
@@ -44,19 +59,24 @@
 
             <h2>Related Posts</h2>
 
-            <div class="section-post">
-                <img src="images/music1.jpg" alt="">
-                <a href="#">Lorem ipsum dolor</a>
-            </div>
-            <div class="section-post">
-                <img src="images/health1.jpg" alt="">
-                <a href="#">Lorem ipsum dolor</a>
-            </div>
+            <?php
+            $relatedPosts = new Admin\Lib\News();
+            $i = 0;
+            $relatedPosts = $relatedPosts->getAllNews();
 
-            <div class="section-post">
-                <img src="images/sport1.jpg" alt="">
-                <a href="#">Lorem ipsum dolor</a>
-            </div>
+            foreach ($relatedPosts as $post) {
+                if ($news->getCategory() == $post->getCategory()) {
+                    echo "
+                        <div class='section-post'>
+                                <img src='images/" . $post->getImage() . "' alt='>
+                                <a href='single-page.php?nid=" . $post->getId() . "'></a>
+                            <a href='single-page.php?nid=" . $post->getId() . "'>" . $post->getTitle() . "</a>
+                        </div>
+                        ";
+                }
+            }
+            ?>
+
         </div>
 
     </div>

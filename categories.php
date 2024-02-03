@@ -25,24 +25,19 @@ include 'admin/lib/News.php';
                             echo
                                 "
 
-                                <li class='card'>
+                            <li class='card'>
                                 <img src='images/" . $news->getImage() . "' alt='Tech1' width='100%' height='50%'>
                                 <div class='cardContent'>
-                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small><br>";
-                            if (isset($_SESSION['role'])) {
-                                if ($_SESSION['role'] == 'admin') {
-                                    echo "<small>Author: " . $news->getAuthor() . "</small>";
-                                }
-                            }
+                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small>
+                                    <a href='single-page.php?nid=" . $news->getId() . "' class='cardLink'>
+                                        <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
+                                        <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                            echo "
-                                        <a href='single-page.php?nid=" . $news->getId() . "' class='cardLink'>
-                                            <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
-                                            <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
-                                        </a>
-                                    </div>
-                                </li>
-                                ";
+                
+                    ";
                         }
                     }
 
@@ -69,23 +64,18 @@ include 'admin/lib/News.php';
                                 "
 
                             <li class='card'>
-                            <img src='images/" . $news->getImage() . "' alt='sport' width='100%' height='50%'>
-                            <div class='cardContent'>
-                                <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small><br>";
-                            if (isset($_SESSION['role'])) {
-                                if ($_SESSION['role'] == 'admin') {
-                                    echo "<small>Author: " . $news->getAuthor() . "</small>";
-                                }
-                            }
-
-                            echo "
+                                <img src='images/" . $news->getImage() . "' alt='sport' width='100%' height='50%'>
+                                <div class='cardContent'>
+                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small>
                                     <a href='single-page.php?nid=" . $news->getId() . "' class='cardLink'>
                                         <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
                                         <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
                                     </a>
                                 </div>
                             </li>
-                            ";
+
+                
+                    ";
                         }
                     }
 
@@ -110,24 +100,19 @@ include 'admin/lib/News.php';
                             echo
                                 "
 
-                                <li class='card'>
+                            <li class='card'>
                                 <img src='images/" . $news->getImage() . "' alt='health' width='100%' height='50%'>
                                 <div class='cardContent'>
-                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small><br>";
-                            if (isset($_SESSION['role'])) {
-                                if ($_SESSION['role'] == 'admin') {
-                                    echo "<small>Author: " . $news->getAuthor() . "</small>";
-                                }
-                            }
+                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small>
+                                    <a href='single-page.php'?nid=" . $news->getId() . " class='cardLink'>
+                                        <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
+                                        <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                            echo "
-                                        <a href='single-page.php?nid=" . $news->getId() . "' class='cardLink'>
-                                            <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
-                                            <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
-                                        </a>
-                                    </div>
-                                </li>
-                                ";
+                
+                    ";
                         }
                     }
 
@@ -154,24 +139,19 @@ include 'admin/lib/News.php';
                             echo
                                 "
 
-                                <li class='card'>
-                                <img src='images/" . $news->getImage() . "' alt='music' width='100%' height='50%'>
+                            <li class='card'>
+                                <img src='images/" . $news->getImage() . "' alt='health' width='100%' height='50%'>
                                 <div class='cardContent'>
-                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small><br>";
-                            if (isset($_SESSION['role'])) {
-                                if ($_SESSION['role'] == 'admin') {
-                                    echo "<small>Author: " . $news->getAuthor() . "</small>";
-                                }
-                            }
+                                    <small><a href='#' class='categoryLink'>" . $news->getCategory() . "</a></small>
+                                    <a href='single-page.php'?nid=" . $news->getId() . " class='cardLink'>
+                                        <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
+                                        <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                            echo "
-                                        <a href='single-page.php?nid=" . $news->getId() . "' class='cardLink'>
-                                            <h3 class='cardTitle'>" . $news->getTitle() . "</h3>
-                                            <p class='cardText' maxlength='20'>" . $news->getDescription() . "</p>
-                                        </a>
-                                    </div>
-                                </li>
-                                ";
+                
+                    ";
                         }
                     }
 
